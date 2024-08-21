@@ -1,10 +1,10 @@
 import React from 'react' 
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom' 
-import Home from ' „/Home' 
-import Oferta from '•/Ofertas' 
-import Produto from './Produtos'
-ReactoM. createRoot (document.getElementById('root')).render(
+import Home from '../src/Home' 
+import Oferta from './Ofertas' 
+import Produto from '../src/Produto'
+ReactDOM.createRoot (document.getElementById('root')).render(
 < React.StrictMode>
  < BrowserRouter>
   < Routes>

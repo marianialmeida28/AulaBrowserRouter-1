@@ -1,5 +1,6 @@
-import { usestate } from "react"
-import ListarProdutos from ". /components/ListarProdutos"
+import ListarProdutos from "../components/ListarProdutos"
+import { useState } from "react"
+
 export default function Ofertas () {
 const [produtos, setProdutos] = useState([{
     nome: "Bird Box",
