@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "../components/Header"
+import Footer from "../components/Footer" 
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import ListaProdutos from "../components/ListarProdutos"
@@ -8,28 +9,39 @@ export default function Home () {
     const [produtos, setProdutos] = useState([{
         nome: "A cinco passos de você",
         genero: "Romance",
-        classificacao: 12,
-        preco: 54.90},
+        classificacao: "Classificação para 16 anos",
+        preco: 54.90,
+        lançamento: 2019,
+        imagem: "https://m.media-amazon.com/images/I/81Q11TuUR3L._AC_UF1000,1000_QL80_.jpg"
+    },
 
     {nome: "Corra",
     genero: "Terror",
-    classificacao: 16,
-    preco:56.00 },
+    classificacao: "Classificação para 18 anos",
+    preco:56.00,
+    lançamento: 2017,
+    imagem: "https://br.web.img3.acsta.net/pictures/17/04/19/21/08/577190.jpg"  },
 
     {nome: "Fratura",
     genero: "Suspense",
-    classificacao: 16,
-    preco: 54.90},
+    classificacao: "Classificação para 16 anos",
+    preco: 54.90,
+    lançamento: 2019,
+    imagem: "https://br.web.img3.acsta.net/pictures/19/09/16/11/03/3523781.jpg" },
 
     {nome: "Gente grande",
     genero: "Comedia",
-    classificacao: 10, 
-    preco: 45.90},
+    classificacao: "Classificação para 12 anos", 
+    preco: 45.90,
+    lançamento: 2010,
+    imagem: "https://br.web.img3.acsta.net/pictures/210/299/21029996_20130821205722213.jpg"},
 
     {nome: "Em ritmo de fuga", 
-    genero: "acao", 
-    classificacao: 15, 
-    preco: 50.99}
+    genero: "Ação", 
+    classificacao: "Classificação para 16 anos", 
+    preco: 50.99,
+    lançamento: 2017,
+    imagem: "https://br.web.img3.acsta.net/c_310_420/pictures/17/07/10/19/10/576841.jpg" }
 ])
 
 return (
@@ -58,7 +70,8 @@ return (
         </div>
     </Carousel>
     <h1>Lista de Filmes</h1>
-    <ListaProdutos ListaProdutos={produtos}/>
+    <ListaProdutos listaProdutos={produtos}/>
+    <Footer/>
     </>
   )
 }
